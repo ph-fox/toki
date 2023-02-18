@@ -1764,7 +1764,7 @@ array(
 	  echo CHtml::dropDownList('website_review_approved_status',
 	  getOptionA('website_review_approved_status')
 	  ,(array)$status_list,array(
-	   'class'=>"uk-form-width-large",       
+	   'class'=>"p-1 border rounded",       
 	  ));
 	  ?>
 	  <p class="indent uk-text-muted">
