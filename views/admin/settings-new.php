@@ -1516,7 +1516,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 	
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Enabled advance search")?>?</label>  
   <?php 
   echo CHtml::checkBox('enabled_advance_search',
@@ -1529,7 +1529,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo Yii::t("default","Check this if you want to enabled advance search on homepage")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Enabled Maps")?>?</label>  
   <?php 
   echo CHtml::checkBox('enabled_search_map',
@@ -1542,7 +1542,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo Yii::t("default","Check this if you want to enabled maps in search result")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Share location")?>?</label>
   <?php 
   echo CHtml::checkBox('disabled_share_location',
@@ -1554,7 +1554,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>   
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Google Auto Address")?>?</label>
   <?php 
   echo CHtml::checkBox('google_auto_address',
@@ -1568,7 +1568,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 <p class="text-muted"><?php echo Yii::t("default","This will disabled the google auto address fill")?></p>
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Set Google Default Country On")?>?</label>
   <?php 
   echo CHtml::checkBox('google_default_country',
@@ -1580,25 +1580,28 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>   
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Search within radius")?></label>  
   <?php 
   echo CHtml::textField('home_search_radius',
   Yii::app()->functions->getOptionAdmin('home_search_radius'),
   array(    
-    "class"=>"numeric_only",
+    "class"=>"numeric_only form-control",
     "placeholder"=>Yii::t("default","Default is 10")
   ))
   ?> 
   
   <?php 
   echo CHtml::dropDownList('home_search_unit_type',
-  Yii::app()->functions->getOptionAdmin("home_search_unit_type"),Yii::app()->functions->distanceOption());
+  Yii::app()->functions->getOptionAdmin("home_search_unit_type"),Yii::app()->functions->distanceOption(),
+array(
+  'class'=>"p-1 mt-1 border rounded"
+));
   ?>    
 </div>
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Sort result by distance")?></label>
   <?php 
   echo CHtml::checkBox('search_result_bydistance',
@@ -1611,31 +1614,31 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 </div>
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Home Title Text")?></label>  
   <?php 
   echo CHtml::textField('home_search_text',
   Yii::app()->functions->getOptionAdmin('home_search_text'),
   array(
-    'class'=>"uk-form-width-large",
+    'class'=>"form-control",
     'placeholder'=>t("Find restaurants near you")
   ))
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Home SubTitle Text")?></label>  
   <?php 
   echo CHtml::textField('home_search_subtext',
   Yii::app()->functions->getOptionAdmin('home_search_subtext'),
   array(
-    'class'=>"uk-form-width-large",
+    'class'=>"form-control",
     'placeholder'=>t("Order Delivery Food Online From Local Restaurants")
   ))
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Search As Address")?></label>
   <?php 
   echo CHtml::radioButton('home_search_mode',
@@ -1648,7 +1651,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo Yii::t("default","User will search restaurant using address (default)")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Search by location")?></label>
   <?php 
   echo CHtml::radioButton('home_search_mode',
@@ -1661,23 +1664,23 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo Yii::t("default","User will search restaurant using location")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Location search type")?></label>
   <?php 
   echo CHtml::dropDownList('admin_zipcode_searchtype',getOptionA('admin_zipcode_searchtype'),
   (array)FunctionsK::zipcodeSearchType(),array(
-    'class'=>"chosen uk-form-width-large"   
+    'class'=>"p-1 border rounded"   
   ))
   ?>
 </div>  
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Location Country")?></label>
   <?php 
   echo CHtml::dropDownList('location_default_country',getOptionA('location_default_country'),
   (array)FunctionsV3::countryList(),array(
-    'class'=>"uk-form-width-large"   
+    'class'=>"p-1 border rounded"   
   ))
   ?>
 </div>  
@@ -1688,7 +1691,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li>
   
-  <div class="row">
+  <div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("Enabled Cancel Order")?></label>  
 	<?php
 		echo CHtml::checkBox('cancel_order_enabled',
@@ -1704,32 +1707,32 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p><?php echo t("Cancelation of order will only be applied on the following condition")?></p>
   
   
-    <div class="row">
+    <div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("after how many days of purchase")?></label>  
 	<?php 
 	echo CHtml::textField('cancel_order_days_applied',
 	getOptionA('cancel_order_days_applied'),
 	array(
-	'class'=>"uk-form-medium numeric_only",
+	'class'=>"form-control numeric_only",
 	'placeholder'=>t("eg. 1 day")
 	))
 	?> 
 	</div>
 	
-	<div class="row">
+	<div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("after how many hours")?></label>  
 	<?php 
 	echo CHtml::dropDownList('cancel_order_hours',
 	getOptionA('cancel_order_hours')
 	,FunctionsV3::generateHours(),array(
-	  
+	  'class'=>"p-1 border rounded"
 	));
 	?> 
 	<?php 
 	echo CHtml::dropDownList('cancel_order_minutes',
 	getOptionA('cancel_order_minutes')
 	,FunctionsV3::generateMinutes(),array(
-	  
+    'class'=>"p-1 border rounded mt-1"	  
 	));
 	?> 
 	</div>
@@ -1741,7 +1744,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 	} else $cancel_order_status=array();
 	?>
 	
-	<div class="row">
+	<div class="row form-control mt-1 mb-1">
 	  <label class="form-label"><?php echo t("With the following order status")?></label>
 	  <?php 
 	  echo CHtml::dropDownList('cancel_order_status_accepted',
@@ -1755,7 +1758,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 	
 	
 	
-   <div class="row">
+   <div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("Request Cancel Order approved status")?></label>  
 	 <?php 
 	  echo CHtml::dropDownList('website_review_approved_status',
@@ -1790,7 +1793,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <li>  <!--Book table-->
   
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Table Booking")?></label>  
   <?php 
   echo CHtml::checkBox('merchant_tbl_book_disabled',
@@ -1804,32 +1807,32 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 
  <p><?php echo t("Cancelation of booking will only be applied on the following condition")?></p>
 
- <div class="row">
+ <div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("after how many days after booking")?></label>  
 	<?php 
 	echo CHtml::textField('booking_cancel_days',
 	getOptionA('booking_cancel_days'),
 	array(
-	'class'=>"uk-form-medium numeric_only",
+	'class'=>"form-control numeric_only",
 	'placeholder'=>t("eg. 1 day")
 	))
 	?> 
 	</div>
 	
-	<div class="row">
+	<div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo t("after how many hours")?></label>  
 	<?php 
 	echo CHtml::dropDownList('booking_cancel_hours',
 	getOptionA('booking_cancel_hours')
 	,FunctionsV3::generateHours(),array(
-	  
+    'class'=>"p-1 border rounded mb-1"
 	));
 	?> 
 	<?php 
 	echo CHtml::dropDownList('booking_cancel_minutes',
 	getOptionA('booking_cancel_minutes')
 	,FunctionsV3::generateMinutes(),array(
-	  
+	  'class'=>"p-1 border rounded"
 	));
 	?> 
 	</div>
@@ -1838,7 +1841,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li><!-- OTHERS-->
 	 
-	<div class="row">
+	<div class="row form-control mt-1 mb-1">
 	<label class="form-label"><?php echo Yii::t("default","Disabled popup asking customer address")?></label>  
 	<?php 
 	echo CHtml::checkBox('customer_ask_address',
@@ -1851,7 +1854,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 	</div>
 		
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Cash on delivery change Required")?></label>  
   <?php 
   echo CHtml::checkBox('cod_change_required',
@@ -1863,7 +1866,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>  
 </div>
 	
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Guest Checkout")?></label>  
   <?php 
   echo CHtml::checkBox('website_disabled_guest_checkout',
@@ -1903,7 +1906,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 <?php echo t("This options enabled the customer to select his/her address from the map during checkout")?></p>-->
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Credit Card Payment Management")?></label>  
   <?php 
   echo CHtml::checkBox('disabled_cc_management',
@@ -1915,7 +1918,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Featured Restaurants")?></label>  
   <?php 
   echo CHtml::checkBox('disabled_featured_merchant',
@@ -1927,7 +1930,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Subscription")?></label>  
   <?php 
   echo CHtml::checkBox('disabled_subscription',
@@ -1951,7 +1954,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 
 
 <DIV style="padding:0px 10px;">
-<input type="submit" value="<?php echo Yii::t("default","Save")?>" class="uk-button uk-form-width-medium uk-button-success">
+<input type="submit" value="<?php echo Yii::t("default","Save")?>" class="btn btn-sm btn-success">
 </DIV>
 
 </form>
