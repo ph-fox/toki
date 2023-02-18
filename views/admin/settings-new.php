@@ -884,7 +884,6 @@ echo " ".t("Default")." G:i:s"
   ?>
   </div>
 
-
   <div class="row">
   <label class="form-label"><?php echo Yii::t("default","Time Picker Format")?></label>
   <?php 
@@ -947,7 +946,7 @@ echo " ".t("Default")." G:i:s"
   
   <li>
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled")?></label>  
   <?php 
   echo CHtml::checkBox('disabled_website_ordering',
@@ -959,7 +958,7 @@ echo " ".t("Default")." G:i:s"
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Hide food price")?></label>  
   <?php 
   echo CHtml::checkBox('website_hide_foodprice',
@@ -971,7 +970,7 @@ echo " ".t("Default")." G:i:s"
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled single food item auto add to cart")?></label>  
   <?php 
   echo CHtml::checkBox('website_disbaled_auto_cart',
@@ -983,7 +982,7 @@ echo " ".t("Default")." G:i:s"
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Disabled Cart Price Validation")?>      
   </label>  
   <?php 
@@ -996,7 +995,7 @@ echo " ".t("Default")." G:i:s"
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Enabled Checking of merchant closing time before placing order")?></label>  
   <?php 
   echo CHtml::checkBox('enabled_merchant_check_closing_time',
@@ -1008,7 +1007,7 @@ echo " ".t("Default")." G:i:s"
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Disabled order confirm page")?></label>  
   <?php 
   echo CHtml::checkBox('disabled_order_confirm_page',
@@ -1027,7 +1026,7 @@ if(!empty($restrict_order_by_status)){
 } else $restrict_order_by_status=array();
 ?>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Cannot do order again if previous order status is")?></label>  
   <?php 
 	  echo CHtml::dropDownList('restrict_order_by_status',
@@ -1039,7 +1038,7 @@ if(!empty($restrict_order_by_status)){
 	  ?>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Enabled Map selection (for delivery transaction)")?></label>  
   <?php 
   echo CHtml::checkBox('enabled_map_selection_delivery',
@@ -1054,7 +1053,7 @@ if(!empty($restrict_order_by_status)){
 
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Service fee")?></label>  
   <?php 
   echo CHtml::textField('admin_service_fee',
@@ -1065,7 +1064,7 @@ if(!empty($restrict_order_by_status)){
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
 <label class="form-label"><?php echo t("Do not apply tax to service fee")?></label>
 <?php echo CHtml::checkBox('admin_service_fee_applytax',
 getOptionA('admin_service_fee_applytax')==1?true:false
@@ -1081,7 +1080,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li>
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label" style="width:180px;padding-right:20px;">
   <?php echo Yii::t("default","Allow merchant to change there own menu")?>?</label>  
   <?php 
@@ -1095,7 +1094,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 </div>
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label" style="width:180px;padding-right:20px;">
   <?php echo t("Enabled lazyload")?></label>  
   <?php 
@@ -1108,7 +1107,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Hide empty category")?></label>  
   <?php 
   echo CHtml::checkBox('mobile2_hide_empty_category',
@@ -1120,7 +1119,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Default Menu")?></label>
   <?php 
   echo CHtml::radioButton('admin_activated_menu',
@@ -1132,7 +1131,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Activate Menu 1")?></label>
   <?php 
   echo CHtml::radioButton('admin_activated_menu',
@@ -1144,7 +1143,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Activate Menu 2")?></label>
   <?php 
   echo CHtml::radioButton('admin_activated_menu',
@@ -1156,7 +1155,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Enabled Food name Search")?></label>  
   <?php 
   echo CHtml::checkBox('enabled_food_search_menu',
@@ -1174,7 +1173,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li>
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label">
   <?php echo Yii::t("default","Nos. of days merchant can change the order status")?>  
   </label>  
@@ -1182,12 +1181,12 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   echo CHtml::textField('merchant_days_can_edit_status',
   Yii::app()->functions->getOptionAdmin('merchant_days_can_edit_status'),
   array(
-    'class'=>"numeric_only"    
+    'class'=>"numeric_only form-control"    
   ))
   ?>   
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label">
   <?php echo Yii::t("default","Time can change the order")?>  
   </label>  
@@ -1195,12 +1194,12 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   echo CHtml::textField('merchant_time_can_edit_status',
   Yii::app()->functions->getOptionAdmin('merchant_time_can_edit_status'),
   array(
-    'class'=>"timepick24format time_mask"    
+    'class'=>"form-control timepick24format time_mask"    
   ))
   ?>   
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label">
   <?php echo t("Based on the following")?>
   </label>  
@@ -1210,13 +1209,16 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ,array(
     1=>t("On order creation date"),
     2=>t("On Delivery/Pickup Date")
+  ),array(
+    'class'=>"p-1 border rounded",
+    'style'=>"outline:none!important;"
   ));
   ?>
 </div>
 
 <p class="text-muted"><?php echo t("leave empty if you want merchant can change the order status anytime")?></p>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label">
   <?php echo t("Disabled Merchant can add their own status")?>?
   </label>
@@ -1235,7 +1237,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li>
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Registration")?>?</label>  
   <?php 
   echo CHtml::checkBox('merchant_disabled_registration',
@@ -1248,7 +1250,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo Yii::t("default","Check this if you want to disabled merchant registration")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Enabled ABN")?></label>  
   <?php 
   echo CHtml::checkBox('merchant_reg_abn',
@@ -1261,30 +1263,32 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 </div>
 
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Registration Status")?></label>  
   <?php 
   echo CHtml::dropDownList('merchant_sigup_status',
   Yii::app()->functions->getOptionAdmin('merchant_sigup_status')
   ,clientStatus(),array(
-   'class'=>"uk-form-width-large"
+   'class'=>"p-1 border rounded",
+   'style'=>"outline:none!important;"
   ));
   ?>
   <p class="text-muted"><?php echo Yii::t("default","The status of the merchant after registration")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Default Country")?></label>  
   <?php 
   echo CHtml::dropDownList('merchant_default_country',
   Yii::app()->functions->getOptionAdmin('merchant_default_country')
   ,$country_list,array(
-   'class'=>"uk-form-width-large"
+   'class'=>"p-1 border rounded",
+   'style'=>"outline:none!important;"
   ));
   ?>  
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Specific Country")?></label>  
   <?php 
   echo CHtml::dropDownList('merchant_specific_country[]',
@@ -1297,7 +1301,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted"><?php echo t("leave empty to show all country")?></p> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Disabled Verification")?>?</label>  
   <?php 
   echo CHtml::checkBox('merchant_email_verification',
@@ -1310,11 +1314,11 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   <p class="text-muted indent"><?php echo Yii::t("default","Check this if you want to disabled merchant Verification")?></p>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Pre-configure food item size")?></label>  
   <?php 
   echo CHtml::textArea('pre_configure_size', getOptionA('pre_configure_size'),array(
-    'style'=>"width:50%;"
+    'class'=>"form-control",
   ));
   ?>
   <p class="text-muted indent"><?php echo t("this will be added as default food item size to merchant during registration")?>.
@@ -1329,66 +1333,67 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   
   <li>
   
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Country")?></label>  
   <?php 
   echo CHtml::dropDownList('admin_country_set',
   Yii::app()->functions->getOptionAdmin('admin_country_set')
   ,$country_list,array(
-    'class'=>"uk-form-width-large",
+    'class'=>"p-1 rounded border",
+    'style'=>"outline:None!important;",
     'data-validation'=>"required"
   ));
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
 <label class="form-label"><?php echo Yii::t('default',"Address")?></label>  
 <?php 
   echo CHtml::textField('website_address',
   Yii::app()->functions->getOptionAdmin('website_address'),
   array(
-    'class'=>"uk-form-width-large"    
+    'class'=>"form-control"  
   ))
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
 <label class="form-label"><?php echo Yii::t('default',"Contact Phone Number")?></label>  
 <?php 
   echo CHtml::textField('website_contact_phone',
   Yii::app()->functions->getOptionAdmin('website_contact_phone'),
   array(
-    'class'=>"uk-form-width-large"    
+    'class'=>"form-control"    
   ))
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
 <label class="form-label"><?php echo Yii::t('default',"Contact email")?></label>  
 <?php 
   echo CHtml::textField('website_contact_email',
   Yii::app()->functions->getOptionAdmin('website_contact_email'),
   array(
-    'class'=>"uk-form-width-large" ,
+    'class'=>"form-control" ,
     //'data-validation'=>"email"
   ))
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
 <label class="form-label"><?php echo Yii::t('default',"Global Sender email")?></label>  
 <?php 
   echo CHtml::textField('global_admin_sender_email',
   Yii::app()->functions->getOptionAdmin('global_admin_sender_email'),
   array(
-    'class'=>"uk-form-width-large" ,
+    'class'=>"form-control" ,
     //'data-validation'=>"email"
   ))
   ?> 
 </div>
 <p class="text-muted">(<?php echo t("This email address will be use when sending email")?>)</p>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Currency Code")?></label>  
   <?php 
   echo CHtml::dropDownList('admin_currency_set',
@@ -1396,13 +1401,14 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ,
   (array)Yii::app()->functions->currencyList()
   ,array(
-    'class'=>"uk-form-width-large",
+    'class'=>"p-1 rounded border",
+    'style'=>"outline:none!important;",
     'data-validation'=>"required"
   ));
   ?> 
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Currency code position")?></label>  
   <?php 
   echo CHtml::dropDownList('admin_currency_position',
@@ -1410,7 +1416,8 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ,
   (array)Yii::app()->functions->currencyPosition()
   ,array(
-    'class'=>"uk-form-width-large",
+    'class'=>"p-1 border rounded",
+    'style'=>"outline:none!important;",
     'data-validation'=>"required"
   ));
   ?> 
@@ -1418,16 +1425,17 @@ getOptionA('admin_service_fee_applytax')==1?true:false
 
 <?php $admin_decimal_place=Yii::app()->functions->getOptionAdmin('admin_decimal_place');?>
 <?php $admin_use_separators=Yii::app()->functions->getOptionAdmin('admin_use_separators');?>
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Decimal Places")?></label>
   <?php echo CHtml::dropDownList('admin_decimal_place',empty($admin_decimal_place)?0:$admin_decimal_place,(array)Yii::app()->functions->decimalPlacesList()
   ,array(
-  'class'=>'uk-form-width-large',
+  'class'=>'p-1 border rounded',
+  'style'=>"outline:none!important;",
   'data-validation'=>"required"
   ))?>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo t("Add space between price and currency")?></label>
   <?php 
   echo CHtml::checkBox('admin_add_space_between_price',
@@ -1439,7 +1447,7 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Use 1000 Separators(,)")?>?</label>
   <?php 
   echo CHtml::checkBox('admin_use_separators',
@@ -1451,24 +1459,24 @@ getOptionA('admin_service_fee_applytax')==1?true:false
   ?>
 </div>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Thousand Separators")?></label>
   <?php 
   echo CHtml::textField('admin_thousand_separator',
   Yii::app()->functions->getOptionAdmin('admin_thousand_separator'),array(
-   'class'=>"uk-form-width-small",
+   'class'=>"form-control",
    'maxlength'=>1
   ));
   ?>
 </div>
 <p class="text-muted">(<?php echo t("leave empty to use standard comma separators")?>)</p>
 
-<div class="row">
+<div class="row form-control mt-1 mb-1">
   <label class="form-label"><?php echo Yii::t("default","Decimal Separators")?></label>
   <?php 
   echo CHtml::textField('admin_decimal_separator',
   Yii::app()->functions->getOptionAdmin('admin_decimal_separator'),array(
-    'class'=>"uk-form-width-small",
+    'class'=>"form-control",
     'maxlength'=>1
   ));
   ?>
