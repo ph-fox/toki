@@ -1,6 +1,5 @@
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/dishes/Do/Add" class="btn btn-secondary"><i class="fa fa-plus"></i> <?php echo Yii::t("default", "Add New") ?></a>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/dishes" class="btn btn-secondary"><i class="fa fa-list"></i> <?php echo Yii::t("default", "List") ?></a>
-
 <div class="spacer"></div>
 
 <div class="row">
