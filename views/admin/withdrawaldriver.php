@@ -68,6 +68,14 @@ if (isset($_GET['do'])){
 <input type="hidden" name="slug" id="slug" value="incomingWithdrawals">
 <?php echo CHtml::hiddenField('w-list',$selected)?>
 <?php echo CHtml::hiddenField('do',$selected)?>
+
+<div class="spacer"></div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
 <table id="table_list" class="table table-hover table-striped table-condensed datatable-basic">  
    <thead>
         <tr>
@@ -89,4 +97,9 @@ if (isset($_GET['do'])){
     </tbody>
 </table>
 <div class="clear"></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </form>
