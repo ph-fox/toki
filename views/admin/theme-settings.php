@@ -328,6 +328,9 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   echo CHtml::dropDownList('theme_list_style',getOptionA('theme_list_style'),array(
      'gridview'=>t("Grid View"),
      'listview'=>t("List View"),
+  ),array(
+    'class'=>"rounded border",
+    'style'=>"padding:5px;outline:none;"
   ));
   ?> 
 </div>
@@ -518,7 +521,9 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   ,array(
     'bottom'=>t("bottom"),
     'top'=>t("top"),
-  ))
+  ),array(
+    'class'=>"rounded border p-1",
+    ))
   ?> 
 </div>
 
