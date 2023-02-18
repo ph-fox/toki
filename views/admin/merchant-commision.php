@@ -109,11 +109,11 @@ if (isset($_GET['merchant_id'])){
   ?>
 </div>
 
-<div class="row">
+<div class="">
   <label class="form-label">&nbsp;</label>
   <!--<input type="button" class="uk-button uk-form-width-medium uk-button-success" value="Search" onclick="sales_summary_reload();">  -->
-  <input type="submit" class="btn btn-sm btn-success mb-2" value="<?php echo t("Search")?>" >  
-  <a href="javascript:;" rel="rptmerchantcommission" class="export_btn btn-sm btn btn-primary"><?php echo t("Export")?></a>
+  <input type="submit" class="btn btn-sm btn-success mt-2" value="<?php echo t("Search")?>" >  
+  <a href="javascript:;" rel="rptmerchantcommission" class="mt-2 export_btn btn-sm btn btn-outline-primary"><?php echo t("Export")?></a>
 </div>  
 
 <div style="height:20px;"></div>
@@ -128,36 +128,47 @@ if (isset($_GET['merchant_id'])){
 echo CHtml::hiddenField('query',$query);
 echo CHtml::hiddenField('query_date',isset($_GET['date'])?$_GET['date']:'' );
 ?>
+<div class="spacer"></div>
 
-<table id="table_list" class="table table-hover table-striped table-condensed datatable-basic">
-  <caption><?php echo Yii::t("default","Merchant List")?></caption>
-   <thead>
-        <tr>
-            <th width="3%"><?php echo Yii::t("default","ID")?></th>
-            <th width="7%"><?php echo Yii::t("default","Merchant Name")?></th>
-            <th width="6%"><?php echo Yii::t("default","Total Price")?></th>
-            <th width="5%"><?php echo Yii::t("default","Commission")?></th>            
-            <th width="5%"></th>            
-        </tr>
-    </thead>
-    <tbody>    
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+            <table id="table_list" class="table table-hover table-striped table-condensed datatable-basic">
+              <caption><?php echo Yii::t("default","Merchant List")?></caption>
+              <thead>
+                    <tr>
+                        <th width="3%"><?php echo Yii::t("default","ID")?></th>
+                        <th width="7%"><?php echo Yii::t("default","Merchant Name")?></th>
+                        <th width="6%"><?php echo Yii::t("default","Total Price")?></th>
+                        <th width="5%"><?php echo Yii::t("default","Commission")?></th>            
+                        <th width="5%"></th>            
+                    </tr>
+                </thead>
+                <tbody>    
+                </tbody>
+            </table>
 
 
 
-<table class="table table-hover table-striped table-condensed datatable-basic">
-<thead>
-        <tr>            
-            <th width="5%"></th>
-            <th width="5%"></th>                        
-            <th width="5%"><?php echo t("Total Commission Price")?>:</th>            
-            <th width="5%"><div class="total_commission"></div></th>  
-            <th width="5%"></th>  
-        </tr>
-    </thead>
-    <tbody>    
-    </tbody>
-</table>
-<div class="clear"></div>
+            <table class="table table-hover table-striped table-condensed datatable-basic">
+            <thead>
+                    <tr>            
+                        <th width="5%"></th>
+                        <th width="5%"></th>                        
+                        <th width="5%"><?php echo t("Total Commission Price")?>:</th>            
+                        <th width="5%"><div class="total_commission"></div></th>  
+                        <th width="5%"></th>  
+                    </tr>
+                </thead>
+                <tbody>    
+                </tbody>
+            </table>
+            <div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </form>
