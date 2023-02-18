@@ -327,7 +327,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <?php 
   echo CHtml::dropDownList('theme_list_style',getOptionA('theme_list_style'),array(
      'gridview'=>t("Grid View"),
-     'listview'=>t("List View"), 
+     'listview'=>t("List View"),
   ));
   ?> 
 </div>
@@ -439,7 +439,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <label class="form-label"><?php echo t("Accept cookies button text")?></label>  
   <?php 
  echo CHtml::textField('cookie_accept_text',getOptionA('cookie_accept_text'),array(
-   'class'=>"uk-form-width-large"
+   'class'=>"form-control"
  ))
   ?> 
 </div>
@@ -448,7 +448,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <label class="form-label"><?php echo t("What are cookies button text")?></label>  
   <?php 
  echo CHtml::textField('cookie_info_text',getOptionA('cookie_info_text'),array(
-   'class'=>"uk-form-width-large"
+   'class'=>"form-control"
  ))
   ?> 
 </div>
@@ -457,7 +457,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <label class="form-label"><?php echo t("Cookie Privacy message")?></label>  
   <?php 
  echo CHtml::textArea('cookie_msg_text',getOptionA('cookie_msg_text'),array(
-   'class'=>"uk-form-width-large"
+   'class'=>"form-control"
  ))
   ?> 
 </div>
@@ -466,7 +466,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <label class="form-label"><?php echo t("What are cookies link")?></label>  
   <?php 
  echo CHtml::textField('cookie_info_link',getOptionA('cookie_info_link'),array(
-   'class'=>"uk-form-width-large"
+   'class'=>"form-control"
  ))
   ?> 
 </div>
@@ -489,7 +489,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <?php 
   echo CHtml::textArea('age_restriction_content',
   getOptionA('age_restriction_content'),array(
-    'class'=>"uk-form-width-large"
+    'class'=>"form-control"
   ));
   ?> 
 </div>
@@ -499,7 +499,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
   <?php 
   echo CHtml::textField('age_restriction_exit_link',
   getOptionA('age_restriction_exit_link'),array(
-    'class'=>"uk-form-width-large"
+    'class'=>"form-control"
   ));
   ?> 
 </div>
@@ -542,7 +542,7 @@ echo CHtml::checkBox('theme_hide_footer_section2',getOptionA('theme_hide_footer_
 
 <div class="row">
 <label class="form-label"></label>
-<input type="submit" value="<?php echo Yii::t("default","Save")?>" class="uk-button uk-form-width-medium uk-button-success">
+<input type="submit" value="<?php echo Yii::t("default","Save")?>" class="btn btn-success">
 </div>
 
 </form>
