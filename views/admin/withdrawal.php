@@ -4,25 +4,16 @@ if (isset($_GET['do'])){
 	$selected=$_GET['do'];
 }
 ?>
-<div class="uk-width-1">
+
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal" class="w-list incoming uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Incoming withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=approved" class="w-list approved uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Approved withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=paid" class="w-list paid uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Paid withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=denied" class="w-list denied uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Denied withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=failed" class="w-list failed uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Failed withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=cancel" class="w-list cancel uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Cancel withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=reversal" class="w-list reversal uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","Reversal withdrawal")?></a>
-
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/admin/incomingwithdrawal/?do=all" class="w-list all uk-button"><i class="fa fa-list"></i> <?php echo Yii::t("default","All withdrawal")?></a>
 
-
-</div>
 
 <div class="spacer"></div>
 
@@ -76,22 +67,36 @@ if (isset($_GET['do'])){
 <input type="hidden" name="slug" id="slug" value="incomingWithdrawals">
 <?php echo CHtml::hiddenField('w-list',$selected)?>
 <?php echo CHtml::hiddenField('do',$selected)?>
-<table id="table_list" class="table table-hover table-striped table-condensed datatable-basic">  
-   <thead>
-        <tr>
-            <th width="2%"><?php echo Yii::t("default","ID")?></th>
-            <th width="5%"><?php echo Yii::t("default","Merchant Name")?></th>
-            <th width="3%"><?php echo Yii::t("default","Payment Method")?></th>
-            <th width="3%"><?php echo Yii::t("default","Amount")?></th>
-            <th width="3%"><?php echo Yii::t("default","From Balance")?></th>
-            <th width="3%"><?php echo Yii::t("default","Status")?></th>
-            <th width="3%"><?php echo Yii::t("default","Date Of Request")?></th>
-            <th width="3%"><?php echo Yii::t("default","Date to process")?></th>
-            <th width="3%"><?php echo Yii::t("default","Action")?></th>
-        </tr>
-    </thead>
-    <tbody>    
-    </tbody>
-</table>
-<div class="clear"></div>
+
+<div class="spacer"></div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                  <table id="table_list" class="table table-hover table-striped table-condensed datatable-basic">  
+                    <thead>
+                          <tr>
+                              <th width="2%"><?php echo Yii::t("default","ID")?></th>
+                              <th width="5%"><?php echo Yii::t("default","Merchant Name")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Payment Method")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Amount")?></th>
+                              <th width="3%"><?php echo Yii::t("default","From Balance")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Status")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Date Of Request")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Date to process")?></th>
+                              <th width="3%"><?php echo Yii::t("default","Action")?></th>
+                          </tr>
+                      </thead>
+                      <tbody>    
+                      </tbody>
+                  </table>
+                  <div class="clear"></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </form>
